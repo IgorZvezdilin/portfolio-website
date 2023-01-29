@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "./styles/style.css">
+    <script src = "./scripts/script.js" defer></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <aside>
+        <div id = "logo">
+            <img src="./images/star-logo.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href = "./form.html">Contacts</a></li>
+            </ul>
+            
+        </nav>
+        <div id="drowBtns">
+            <button id="hideCanvasBtn">Stop Drowing 🖼️</button>
+            <button id="howDrowBtn">How to drow?</button>
+        </div>
+        <nav id = "mobile">
+            <ul>
+                <li>Intro</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contacts</li>
+                <li><button>Say, Hi!</button></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section id  ="intro">
+            <h1>Hi,</h1>
+            <h1>I`m <span id = "name-login">Igor</span>,</h1>
+            <h1>full-stack engineer.</h1>
+            <canvas id="canvas"></canvas>
+        </section>
+        <section id = "about">
+            <div class="right-side">
+                <h2>About Me</h2>
+            </div>
+            <div class = "left-side">
+                <div>
+                   <img src="./images/portfolio_self.jpg"> 
+                   <div>
+                    <h3> Igor Zvezdilin</h3>
+                    <p>Junior full-stack engeneer. You can also now me as a Starsky!
+                    <p>My work lives in web and my main motivation is giving people really cool product, which will be usefull and intresting.
+                    <p>I graduated from Voronezh State University. And now i continue to developing in the web applications.
+                    <p>The sky is the limit.
+                   </div>
+                </div>
+                <div>
+                <h3>Skills</h3>
+                <script src="https://kit.fontawesome.com/f52f76e186.js" crossorigin="anonymous"></script>
+                <div class="skills-container">
+                    <i class="fa-brands fa-html5 fa-3x"></i>
+                    <i class="fa-brands fa-css3-alt fa-3x"></i>
+                    <i class="fa-brands fa-square-js fa-3x"></i>
+                    <i class="fa-brands fa-git fa-3x"></i>
+                    <i class="fa-brands fa-chrome fa-3x"></i>
+                    <i class="fa-solid fa-terminal fa-3x"></i>
+                    <i class="fa-brands fa-node fa-3x"></i>
+                    <i class="fa-brands fa-github fa-3x"></i>
+                </div>
+                </div>    
+            </div>     
+        </section>
+
+        <section id = "work">
+            <div class = "left-side">
+            <h2>Projects</h2>
+            <article></article>
+            </div>
+            <div class="right-side">
+                <div class="project-container">
+                <div class = 'project' id = "project-1">
+                    <div class="projectOnHover">
+                        <h3>HTML-CSS-Cheatsheet</h3>
+                        <h4><a href="https://github.com/IgorZvezdilin/HTML-CSS-cheat-sheet">See the code</a></h4>
+                        <h4><a href="https://igorzvezdilin.github.io/HTML-CSS-cheat-sheet/">Visit the site</a></h4>
+                        <h5>HTML and CSS only</h5>
+                    </div>
+                </div>
+                <div class = 'project' id = "project-2">
+                    <div class="projectOnHover">
+                        <h3>CSS Style Guide</h3>
+                        <h4><a href="https://github.com/IgorZvezdilin/web-style-guide">See the code</a></h4>
+                        <h4><a href="https://igorzvezdilin.github.io/web-style-guide/">Visit the site</a></h4>
+                        <h5>HTML and CSS only</h5>
+                    </div>
+                </div>
+                <div class = 'project' id = "project-3">
+                    <div class="projectOnHover">
+                        <h3>Endless Space</h3>
+                        <h4><a href="https://github.com/IgorZvezdilin/star-journey-flex">See the code</a></h4>
+                        <h4><a href="https://igorzvezdilin.github.io/star-journey-flex/">Visit the site</a></h4>
+                        <h5>HTML and CSS only</h5>
+                        </div>
+                </div>
+                <div class = 'project' id = "project-4">
+                    <div class="projectOnHover">
+                        <h3>Health Club</h3>
+                        <h4><a href="https://github.com/IgorZvezdilin/health-club-grid-flexbox">See the code</a></h4>
+                        <h4><a href="https://igorzvezdilin.github.io/health-club-grid-flexbox/">Visit the site</a></h4>
+                        <h5>HTML and CSS only</h5>
+                    </div>
+                </div>
+                <div class = 'project' id = "project-5">
+                    <div class="projectOnHover">
+                        <h3>Portfolio</h3>
+                        <h4><a href="">See the code</a></h4>
+                        <h4><a href="">Visit the site</a></h4>
+                        <h5>HTML,CSS,JS</h5>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Freepik - Flaticon</a>
+        <h3>All rights reserved</h3>
+        <h3 id="creator">Powered by Starsky</h3>
+    </footer>
+</body>
+</html>

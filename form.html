@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "./styles/style.css">
+    <script src = "./scripts/scriptForm.js" defer></script>
+    <title>Сontacts</title>
+</head>
+<body>
+    <aside>
+        <div id = "logo">
+            <img src="./images/star-logo.png">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html#intro">Intro</a></li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./index.html#work">Projects</a></li>
+                <li><a href = "./form.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class= 'form' id="drowBtns">
+            <button id="hideCanvasBtn">Stop Drowing 🖼️</button>
+            <button id="howDrowBtn">How to drow?</button>
+        </div>
+    </aside>
+    <main>
+        <section class="contact-form">
+            <div id="sayThanks">
+            <form id="formToHide">
+                <section>
+                    <h2 id="form-h2">Send me a message!</h2>
+                    <hr />
+                    <br>
+                </section>
+                <section>
+                    <label for="name">Enter your name.</label>
+                    <br>
+                    <input type = 'text' name = 'name' id = 'name' placeholder="Bobby">
+                    <br>
+                </section>
+                <section>
+                    <label for = "mail">Inter your email adress.</label>
+                    <br>
+                    <input type="email" name="mail" id="mail" placeholder="bobby@gmail.com">
+                    <br>
+                </section>
+                <section>
+                    <label for="msg">Inter your message.</label>
+                    <br>
+                    <textarea name="msg" id="msg" rows="10" cols="30" maxlength="250"></textarea>
+                </section>
+                <section>
+                    <label for = "rate">Rate my portfolio!</label>
+                    <br>
+                    <span class="rate">Bad 👎</span>
+                    <input type="range" id="rate" name="rate" min="1" max="10">
+                    <span class="rate"> Perfect  👍 </span>
+                </section>
+                <section>
+                    <input type="submit" name = "submit" value="Submit" id="submit">
+                </section>
+            </form>
+            </div>
+            <div id="references">
+                <h2>You can also find me here!</h2>
+                <hr />
+                <script src="https://kit.fontawesome.com/f52f76e186.js" crossorigin="anonymous"></script>
+                <div id="references-container">
+                    <a href="https://github.com/IgorZvezdilin" target="_blank"><i class="fa-brands fa-github fa-4x"></i></a>
+                    <a href="mailto:zwezdilin.ig@yandex.ru" target="_blank"><i class="fa-solid fa-at fa-4x"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>    
+</body>
+</html>
