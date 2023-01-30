@@ -28,7 +28,7 @@ const howDrowBtn = document.getElementById('howDrowBtn');
 const intro = document.getElementById('intro');
 const about = document.getElementById('about');
 
-canvas.style.width = '92%';
+canvas.style.width = '85vw';
 canvas.style.height = '100vh';
 
 clarityDrow();
@@ -53,7 +53,9 @@ howDrowBtn.onclick = buttonSwitch('How to drow?', 'Click and Hold!');
 
 
 function drowingByClick () {
+
     canvas.onmousedown = startDrowing;
+    document.onmousemove = allowDrowing;
     canvas.onmousemove = drowing;
     canvas.onmouseup = interruptDrowing;
 } 
@@ -74,23 +76,35 @@ function hideCanvas(msgBeforeEvent, msgAfterEvent) {
 
 function clarityDrowElem (element) {  
     canvas.height = element.clientHeight;
-    canvas.width =element.clientWidth; 
+    canvas.width =element.clientWidth *  0.85; 
 }
 
 function clarityDrow () {
     clarityDrowElem(intro);
 }
 
-function drowing() {
+function allowDrowing(event) {
+    if(event.pageX > canvas.width && event.pageY > canvas.height) {
+        interruptDrowing();
+    }
+}
+
+function drowing(event) {
     if(isDrowing === true) {
         context.beginPath();
         context.arc(mouseX, mouseY, 15,0 , 2*Math.PI, false);
         context.fillStyle = 'rgba(0,128,128,0.1)';
         context.fill();
 
+        if(document.pageX > canvas.width && this.pageY > canvas.height) {
+            console.log('true');
+            interruptDrowing();
+        }
+        
         requestAnimationFrame(drowing);
     }
 }
+
 function startDrowing () {
     isDrowing = true;
 }
@@ -104,23 +118,9 @@ function setMousePosition (event) {
     mouseY = (event.clientY - canvasPos.top);
 }
 
-function getPositionElement (element) {
-    let xPosition = 0;
-    let yPosition = 0;
-
-    while (element) {
-        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
-        yPosition += (element.offsetTop + element.scrollTop + element.clientTop);
-        element = element.offsetParent;
-    }
-
-    return {
-        x: xPosition,
-        y: yPosition
-    };
-}
 
 //work
+
 const projects = document.getElementsByClassName('projectOnHover');
 for(let i = 0; i< projects.length; i++) {
     projects[i].style.opacity = '0';
@@ -138,7 +138,29 @@ function opacityToZero () {
     this.style.opacity = '0';
 }
 
-//contacts
+// aside fo phones and tablets
+
+const menu = document.getElementsByClassName('menu');
+
+for (let i = 0; i< menu.length; i++) {
+    menu[i].addEventListener('touchstart', function () {
+        menu[i].style.backgroundColor = 'rgba(210,180,140,1)';
+        menu[i].style.borderColor = 'rgba(210,180,140,1)';
+    })
+    menu[i].addEventListener('touchend', function () {
+        menu[i].style.backgroundColor = 'white';
+        menu[i].style.borderColor = 'rgba(255, 69, 0, 1)';
+
+    })
+}
+
+//work for phones and tables
+
+for (let i = 0; i< projects.length; i++) {
+    projects[i].style.opacity = '0';
+    projects[i].addEventListener('touchend',opacityToOne);
+    projects[i].addEventListener('touchmove',opacityToZero);
+}
 
 
 

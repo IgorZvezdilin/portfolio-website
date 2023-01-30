@@ -8,8 +8,19 @@
     <script src = "./scripts/scriptForm.js" defer></script>
     <title>Сontacts</title>
 </head>
-<body>
-    <aside>
+<body class="form">
+    <header class=" mobile" id="header-form">
+        <div id = "logo">
+            <img src="./images/star-logo.png">
+        </div>
+        <ul>
+            <li class="menu"><a href="./index.html#intro">Intro</a></li>
+            <li class="menu"><a href="./index.html#about">About</a></li>
+            <li class="menu"><a href="./index.html#work">Projects</a></li>
+            <li class="menu"><a href = "./form.html">Contacts</a></li>
+        </ul>
+    </header>
+    <aside class="tabletAndDesctop">
         <div id = "logo">
             <img src="./images/star-logo.png">
         </div>
@@ -21,7 +32,7 @@
                 <li><a href = "./form.html">Contacts</a></li>
             </ul>
         </nav>
-        <div class= 'form' id="drowBtns">
+        <div class= 'button-canvas' id="drowBtns">
             <button id="hideCanvasBtn">Stop Drowing 🖼️</button>
             <button id="howDrowBtn">How to drow?</button>
         </div>
@@ -52,7 +63,7 @@
                     <br>
                     <textarea name="msg" id="msg" rows="10" cols="30" maxlength="250"></textarea>
                 </section>
-                <section>
+                <section class="rate-section">
                     <label for = "rate">Rate my portfolio!</label>
                     <br>
                     <span class="rate">Bad 👎</span>

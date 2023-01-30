@@ -6,7 +6,7 @@ html,body {
     overflow-x: hidden;
 }
 
-aside, h2, h3, #hideCanvasBtn, label, .rate {
+aside, h2, h3, #hideCanvasBtn, label, .rate, header {
     font-family: 'Nunito', sans-serif;  
 }
 
@@ -18,16 +18,15 @@ p, h4,h5, footer {
 aside {
 
     position: fixed;
-    left: 92%;
-    width: 8%;
+    left: 85vw;
+    width: 15vw;
     height: 100vh;
     z-index: 10;
     background-color: white;
 
     display: flex;
     justify-content:space-between;
-    align-items: center;
-    align-content: center;
+    align-items:center;
     flex-direction: column;
 }
 
@@ -55,7 +54,7 @@ li {
     border-radius: 1rem;
     padding: 0.25rem;
     margin-top: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     transition: border-color 0.3s linear;
 }
 
@@ -97,6 +96,9 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
+    header {
+        display: none;
+    }
     li:hover {
         border: 0.125rem solid orangered;
     }
@@ -105,10 +107,107 @@ a {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    header {
+        display: none;
+    }
+    li {
+        border: 0.125rem solid rgba(255, 69, 0, 1);
+    }
+
+    aside nav {
+        padding-top: 20%;
+    }
+
+    aside nav li {
+        margin-top: 25%;
+        font-size: 0.85rem;
+        padding: 0.15rem;
+    }
+
+    aside {
+        justify-content: center;
+    }
+    
+    #drowBtns {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .tabletAndDesctop {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+        box-sizing: border-box;
+        background-color: white;
+        height: 70px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        flex-direction: row;
+        font-size: 0.85rem;
+        z-index: 3;
+        
+    }
+    header ul {
+        height: 40px;
+        width: 80vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    #logo img {
+        margin-left: 50%;
+        padding-bottom: 50%;
+    }
+
+
+    header ul li {
+        width: 5rem;
+        padding: 0.15rem;
+    }
+
+}
+
+@media only screen and (max-width: 426px){
+    header {
+        font-size: 0.65rem;
+        
+    }
+    header ul li {
+        width: auto;
+        padding: 0.25rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    header {
+        font-size: 0.5rem;
+        display: block;
+        padding-top: 10px;
+    }
+
+    header ul {
+        width: 100%;
+    }
+
+    #logo {
+        display: none;
+    }
+
+}
+
+
 /* main */
 #intro {
     height: 100vh;
-    width: 92vw;
+    width: 100vw;
     background: linear-gradient(30deg, #2F4F4F, #A9A9A9, orangered);
     box-sizing: border-box;
     padding-top: 5rem;
@@ -122,6 +221,7 @@ h1 {
     margin: 0;
     margin-top: 1em;
     margin-left: 2em;
+    margin-right: 5rem;
     z-index: 1;
     
 }
@@ -137,25 +237,56 @@ canvas {
     z-index: 1;
 }
 
+@media only screen and (max-width: 768px){
+    #intro {
+        height: 100vh;
+        width: 85vw;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    canvas {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
 /*common*/
 
 .left-side{
+    box-sizing: border-box;
     width: 45%;
     margin-top: 2rem;
-    margin-left: 2%;
 
 }
 
 .right-side {
+    box-sizing: border-box;
     width: 45%;
-    margin-top: 2rem;
-    margin-right: 1%;
-    margin-left: 5%;    
+    margin-top: 2rem; 
+    margin-left: 5%;  
 }
 #about, #work {
     height: 75vh;
-    width: 90%;
+    width: 85vw;
 }
+
+@media only screen and (max-width: 500px){
+    #intro, #about, #work, footer {
+        width: 100vw;
+    }
+    
+}
+
+
 
 
 
@@ -163,7 +294,7 @@ canvas {
 
 #about{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row-reverse;
 }
 
@@ -194,7 +325,7 @@ canvas {
 #about .right-side h2, #work .left-side h2 {
     position: relative;
     top: 45%;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
     padding: 0;
     color: white;
@@ -226,21 +357,64 @@ canvas {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding:0 3rem 0 2rem;
+}
+.skills-container i {
+    margin: 0.25rem 0.5rem 0 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .skills-container {
+        justify-content: flex-start;
+    }
+
+    .skills-container i {
+        margin: 0.25rem 0.5rem 0 0.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 426px){
+    #about {
+        flex-direction: column;
+        height: auto;
+        padding-top: 70px;
+    }
+    
+    #about .right-side, .left-side {
+        position: static;
+        box-sizing: border-box;
+        width: auto;
+        height: auto;
+        margin: 2rem 5% 2rem;
+    }
+
+    #about .left-side {
+        height: 25rem;
+    }
+
+    #about .right-side h2 {
+        top: 0;
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+    #about .right-side h2 {
+        font-size: 2.5rem;
+    }
 }
 
         /*work*/
 
 #work {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;  
     margin-top: 2rem;  
 }
 
 #work .left-side {
     background: linear-gradient(180deg,#9400D3 40%, #FA3E54 );
-    margin-right: 0;
 }
 
 #work .right-side {
@@ -321,13 +495,40 @@ canvas {
     color: #aba7a5;
 }
 
+@media only screen and (max-width: 426px) {
+    #work {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+        padding-top: 70px;
+    }
+    
+    #work .right-side, .left-side {
+        position: static;
+        box-sizing: border-box;
+        width: auto;
+        height: auto;
+        margin: 2rem 5% 2rem;
+    }
+
+    #work .right-side {
+        height: 25rem;
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+    #work .left-side h2 {
+        font-size: 2.5rem;
+    }
+}
 /* footer*/
 
 footer {
     box-sizing: border-box;
     height: auto;
-    width: 88%;
-    margin: 2% 2rem 2rem 2%;
+    width: 81vw;
+    margin: 2% 2rem 2% 2%;
     padding-bottom: 0.25rem;
     background: linear-gradient(150deg, #FA3E54 40%, #FF8B3F);
     border-radius: 1rem;
@@ -351,39 +552,59 @@ footer #creator {
     margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 500px) {
+    footer {
+        box-sizing: border-box;
+        width: auto;
+        margin: 2rem 3% 2rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    footer {
+        box-sizing: border-box;
+        margin: 2rem 5% 2rem;
+    }
+}
+
 /*for form html (contacts)*/
 
 .form {
+    background: linear-gradient(30deg, orangered, violet);
+    height: 100vh;
+}
+
+.button-canvas {
     opacity: 0;
 }
 
 .contact-form {
-    box-sizing: border-box;
-    width: 100vw;
+    width: 85vw;
     height: 100vh;
-    background: linear-gradient(30deg, orangered, violet);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 0;
 }
+
 
 #sayThanks {
     box-sizing: border-box;
-    width: 30%;
-    height: 90%;
-    text-align: center;
+    width: 50%;
+    height: auto;
     background-color: #2F4F4F;
     border-radius: 1rem;
     color: white;
+    text-align: center;
 
-    display: flex;
-    justify-content: center;
-    align-items:center;
+
 }
 
 #sayThanks h1 {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0.5rem;
+    padding: 2rem;
 }
 
 form {
@@ -401,6 +622,7 @@ input {
     border-radius: 0.5rem;
     margin: 1% 0 5%;
     height: 20px;
+    width: 80%;
 }
 
 textarea {
@@ -409,10 +631,15 @@ textarea {
     padding: 2%;
     margin-top: 2%;
     margin-bottom: 5%;
+    width: 80%;
+}
+
+#rate{
+    width: 30%;
 }
 
 #submit {
-    margin: 0;
+    margin: 0 0 1% 0;
     width: 30%;
     height: 5%;
 }
@@ -424,15 +651,58 @@ textarea {
     }
 }
 
+@media only screen and (max-width: 768px){
+    .contact-form {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #sayThanks {
+        margin: 0;
+    }
+
+    #sayThanks h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #header-form {
+        position: static;
+    }
+    .contact-form{
+        box-sizing: border-box;
+        margin-top: 1%;
+        height: 100vh;
+        width: 100vw;
+        
+    }
+    #sayThanks {
+        width: 80vw;
+    }
+
+    #sayThanks h1 {
+        font-size: 3.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 376px) {
+    #sayThanks h1 {
+        font-size: 2.5rem;
+    }
+}
+/*references*/
+
 #references {
     box-sizing: border-box;
     text-align: center;
-    margin-left: 2%;
-    width: 30%;
+    width: 60%;
     background-color: #2F4F4F;
     border-radius: 1rem;
     color: white;
     padding: 0.5rem;
+    margin-top: 5%;
 }
 
 #references-container a {
