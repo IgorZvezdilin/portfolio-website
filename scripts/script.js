@@ -158,7 +158,7 @@ for (let i = 0; i< menu.length; i++) {
 
 for (let i = 0; i< projects.length; i++) {
     projects[i].style.opacity = '0';
-    projects[i].addEventListener('touchend',opacityToOne);
+    projects[i].addEventListener('touchstart',opacityToOne);
     projects[i].addEventListener('touchmove',opacityToZero);
 }
 
