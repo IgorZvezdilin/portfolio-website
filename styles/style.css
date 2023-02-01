@@ -87,10 +87,6 @@ a {
 
 }
 
-#howDrowBtn {
-    height: 70px;
-}
-
 #mobile {
     display: none;
 }
@@ -218,10 +214,7 @@ h1 {
     color: white;
     font-family: 'Comfortaa', cursive;
     font-size: 5rem;
-    margin: 0;
-    margin-top: 1em;
-    margin-left: 2em;
-    margin-right: 5rem;
+    margin: 1em 5em 0 2em;
     z-index: 1;
     
 }
@@ -264,19 +257,47 @@ canvas {
 .left-side{
     box-sizing: border-box;
     width: 45%;
-    margin-top: 2rem;
 
 }
 
 .right-side {
     box-sizing: border-box;
     width: 45%;
-    margin-top: 2rem; 
     margin-left: 5%;  
 }
 #about, #work {
     height: 75vh;
     width: 85vw;
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+#about .left-side::-webkit-scrollbar, #work .right-side::-webkit-scrollbar {
+    display: none;
+}
+
+#about .right-side, #work .left-side {
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#about .right-side h2, #work .left-side h2 {
+    position: relative;
+    top: 45%;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#about .left-side, #work .right-side {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border: 0.25rem solid rgba(0,128,128,1);
+    border-radius: 1rem;
+    
 }
 
 @media only screen and (max-width: 500px){
@@ -286,15 +307,9 @@ canvas {
     
 }
 
-
-
-
-
 /* about */
 
 #about{
-    display: flex;
-    justify-content: center;
     flex-direction: row-reverse;
 }
 
@@ -302,33 +317,8 @@ canvas {
     background: linear-gradient(210deg, #aba7a5,#6f7e7e 50%, #9400D3);
 }
 
-#about .right-side, #work .left-side {
-    border-radius: 1rem;
-    text-align: center;
-
-}
-
 #about .left-side {
-    box-sizing: border-box;
-    overflow-y: scroll;
-    scrollbar-width: 0;
-    border: 0.25rem solid rgba(0,128,128,1);
-    border-radius: 1rem;
     padding: 0.25rem;
-}
-
-#about .left-side::-webkit-scrollbar {
-    display: none;
-}
-
-
-#about .right-side h2, #work .left-side h2 {
-    position: relative;
-    top: 45%;
-    font-size: 3rem;
-    margin: 0;
-    padding: 0;
-    color: white;
 }
 
 #about img {
@@ -407,24 +397,13 @@ canvas {
         /*work*/
 
 #work {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;  
-    margin-top: 2rem;  
+    flex-direction: row;    
 }
 
 #work .left-side {
     background: linear-gradient(180deg,#9400D3 40%, #FA3E54 );
 }
 
-#work .right-side {
-    box-sizing: border-box;
-    border: 0.25rem solid rgba(0,128,128,1);
-    border-radius: 1rem;
-    overflow-y: scroll;
-
-
-}
 #work .project-container {
     display: flex;
     justify-content: space-evenly;
@@ -434,10 +413,6 @@ canvas {
     width: 100%;
     height: 210vh;
 
-}
-
-#work .right-side::-webkit-scrollbar {
-    display: none;
 }
 
 #work .project {
@@ -469,11 +444,11 @@ canvas {
 
 #work .projectOnHover {
     height: 100%;
+    width: 100%;
     text-align: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
-    width: 100%;
     margin: 0;
 
     display: flex;
