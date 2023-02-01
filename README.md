@@ -26,7 +26,7 @@ When you come at the main page of my Portfolio, canvas auto on and you auto star
 
 ## Website
 
-You can see the site [here]("https://igorzvezdilin.github.io/portfolio-website/index.html#intro")
+You can see the site [here](https://igorzvezdilin.github.io/portfolio-website/index.html#intro)
 
 ## Acknowledgements
 
