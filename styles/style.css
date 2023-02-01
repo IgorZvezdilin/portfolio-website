@@ -102,6 +102,10 @@ a {
     #hideCanvasBtn:hover, #howDrowBtn:hover {
         border-color: black;
     }
+    li:active {
+        background-color: rgba(210,180,140,1);
+        border-color: rgba(210,180,140,1);
+    }
 }
 
 @media only screen and (max-width: 768px) {
