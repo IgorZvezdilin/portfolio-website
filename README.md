@@ -21,8 +21,11 @@ I use js to add some interactivites:
 - Button which hide/show canvas;
 - Button which explain how you can drow in canvas;
 - Hover effect on projects
+- Validation the form
 
 When you come at the main page of my Portfolio, canvas auto on and you auto start drowing. If you want to drow something, click at the appropriate button.
+
+You may notice that validation does not work, but this is not quiet true. The things is that the form does not send anywhere, so i decide to use JS to interact with button submit to show a message.
 
 ## Website
 
