@@ -183,7 +183,9 @@ a {
     }
     header ul li {
         width: auto;
-        padding: 0.25rem;
+    }
+    header ul li a{
+        padding: 0.3rem;
     }
 }
 
