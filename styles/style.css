@@ -453,6 +453,9 @@ canvas {
 #work #project-5 {
     background-image: url('../images/portfolio_project.jpg');
 }
+#work #project-6 {
+    background-image: url('../images/jaming-react.jpg');
+}
 
 
 #work .projectOnHover {
