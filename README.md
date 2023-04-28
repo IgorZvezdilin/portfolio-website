@@ -52,3 +52,4 @@ You can see the site [here](https://igorzvezdilin.github.io/portfolio-website/in
 - The opportunity to drow using cursor at main page
 - Cross platform
 
+https://t.me/+UbwCNAAOexM1OTIy
